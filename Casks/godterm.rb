@@ -8,15 +8,13 @@ cask "godterm" do
   desc "Run many Claude Code sessions side by side, each on its own account"
   homepage "https://github.com/daniel-farina/godterm"
 
-  container type: :dmg
   depends_on macos: :monterey
+  container type: :dmg
 
   app "GodTerm.app"
   binary "#{appdir}/GodTerm.app/Contents/MacOS/godterm"
 
-  zap trash: [
-    "~/.godterm",
-  ]
+  zap trash: "~/.godterm"
 
   caveats <<~TEXT
     GodTerm runs Claude Code: install it too (npm install -g @anthropic-ai/claude-code).
