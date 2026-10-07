@@ -10,7 +10,6 @@ cask "godterm" do
 
   container type: :dmg
   depends_on macos: :monterey
-  conflicts_with formula: "godterm"
 
   app "GodTerm.app"
   binary "#{appdir}/GodTerm.app/Contents/MacOS/godterm"
