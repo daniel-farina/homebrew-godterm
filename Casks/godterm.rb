@@ -9,7 +9,7 @@ cask "godterm" do
   homepage "https://github.com/daniel-farina/godterm"
 
   container type: :dmg
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   conflicts_with formula: "godterm"
 
   app "GodTerm.app"
